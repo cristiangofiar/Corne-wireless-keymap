@@ -12,7 +12,7 @@
     tapping-term-ms = <200>;
 };
 
-
+/*
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -22,7 +22,7 @@
         };
     };
 };
-
+*/
 
 / {
         keymap {
