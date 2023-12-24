@@ -29,57 +29,25 @@
                 compatible = "zmk,keymap";
 
                 default_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
-// | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
-// | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
-//                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q &kp W &kp E &kp R &kp T   &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LCTRL &kp A &kp S &kp D &kp F &kp G   &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LSHFT &kp Z &kp X &kp C &kp V &kp B   &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                  &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp RALT
+                        &kp ESCAPE &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp DELETE &kp TAB &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L KC_COLN KC_QUES &kp LEFT_GUI &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp LEFT_CONTROL &kp ENTER &kp LEFT_SHIFT &mo 1 &kp SPACE &kp BACKSPACE &mo 2 SC_RAPC &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20
                         >;
                 };
                 lower_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                                    &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+                        &trans &kp F20 &kp F20 &kp UP &kp F20 &kp F20 &kp KP_EQUAL &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp LOCKING_NUM &trans &trans &kp KP_SLASH &kp LEFT &kp DOWN &kp RIGHT &kp KP_ASTERISK &kp KP_PLUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MINUS &kp F20 &trans &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp KP_DOT &kp KP_N1 &kp KP_N2 &kp KP_N3 &kp F20 &kp F20 &trans &trans &trans &kp ENTER &trans &kp KP_N0 &kp F20 &kp F20 &kp F20 &kp KP_N0 &trans &kp ENTER
                         >;
                 };
 
                 raise_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-   &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-   &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        KC_EXLM KC_AT KC_HASH &kp UP KC_DLR KC_PERC &kp KP_EQUAL &kp F20 &kp F20 &kp GRAVE &kp F20 &trans &trans KC_CIRC &kp LEFT &kp DOWN &kp RIGHT KC_AMPR &kp HOME &kp END &kp SEMICOLON &kp SINGLE_QUOTE &kp KP_MINUS &kp KP_SLASH &trans &kp F20 &kp F20 KC_LCBR KC_LPRN &kp LEFT_BRACKET &kp RIGHT_ALT &kp LEFT_GUI &kp BACKSLASH KC_PIPE KC_UNDS &trans &trans &trans &trans &trans &trans &trans &kp F20 &kp F20 &kp F20 &trans &trans &trans
                         >;
                 };
                 
                 config_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-// | CTRL |     |     |     |     |     |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-// | SHFT |     |     |     |     |     |   |  _  |  +  |  {  |  }  | "|" |  ~   |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-    &kp  TAB  &kp EXCL &kp AT &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS  &kp KP_MULTIPLY &kp LPAR &kp RPAR &kp BSPC
-    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
-    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
-                             &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        QK_BOOT &kp F20 &kp F20 &kp F20 &kp F20 &kp C_AL_MY_COMPUTER &kp F20 &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_DEC &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp C_MUTE &kp C_VOLUME_UP &kp C_VOLUME_DOWN &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &kp F20 &trans &trans &trans &trans &trans &trans &kp F20 &kp F20 &kp F20 &trans &trans &trans
                         >;
                 };
         };
