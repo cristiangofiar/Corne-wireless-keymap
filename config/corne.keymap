@@ -12,17 +12,35 @@
     tapping-term-ms = <200>;
 };
 
-/*
-/ {
-    conditional_layers {
-        compatible = "zmk,conditional-layers";
-        tri_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
+
+
+/ macros {
+    macro_parentheses: macro_parentheses {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <0>;
+        bindings
+            = <&macro_press &kp LEFT_PARENTHESIS>
+            , <&macro_release &kp RIGHT_PARENTHESIS>
+            ;
+    };
+    macro_braces: macro_braces {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <1>;
+        bindings
+            = <&macro_press &kp LEFT_BRACE>
+            , <&macro_release &kp RIGHT_BRACE>
+            ;
+    };
+    macro_brackets: macro_brackets {
+        compatible = "zmk,behavior-macro";
+        #binding-cells = <2>;
+        bindings
+            = <&macro_press &kp LEFT_BRACKET>
+            , <&macro_release &kp RIGHT_BRACKET>
+            ;
     };
 };
-*/
+
 
 / {
         keymap {
@@ -30,36 +48,36 @@
 
                 default_layer {
                         bindings = <
-                        &kp ESCAPE &kp Q &kp W &kp E &kp R &kp T &kp Y &kp U &kp I &kp O &kp P &kp DELETE 
-                        &kp TAB &kp A &kp S &kp D &kp F &kp G &kp H &kp J &kp K &kp L &kp COLON &kp QUESTION 
-                        &kp LEFT_GUI &kp Z &kp X &kp C &kp V &kp B &kp N &kp M &kp COMMA &kp DOT &kp LEFT_CONTROL &kp ENTER 
-                        &kp LEFT_SHIFT &mo 1 &kp SPACE &kp BACKSPACE &mo 2 &kp RALT
+                        &kp ESCAPE &kp Q &kp W &kp E &kp R &kp T                            &kp Y &kp U &kp I &kp O &kp P &kp DELETE 
+                        &kp TAB &kp A &kp S &kp D &kp F &kp G                               &kp H &kp J &kp K &kp L &kp COLON &kp QUESTION 
+                        &kp LEFT_GUI &kp Z &kp X &kp C &kp V &kp B                          &kp N &kp M &kp COMMA &kp DOT &kp LEFT_CONTROL &kp ENTER 
+                                              &kp LEFT_SHIFT &mo 1  &kp SPACE     &kp BACKSPACE  &mo 2 &kp RALT
                         >;
                 };
                 lower_layer {
                         bindings = <
-                        &trans &none &none &kp UP &none &none &kp KP_EQUAL &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp LOCKING_NUM &trans 
-                        &trans &kp KP_SLASH &kp LEFT &kp DOWN &kp RIGHT &kp KP_ASTERISK &kp KP_PLUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MINUS &none 
-                        &trans &none &none &none &none &none &kp KP_DOT &kp KP_N1 &kp KP_N2 &kp KP_N3 &none &none
-                        &trans &trans &trans &kp ENTER &trans &kp KP_N0
+                        &trans &none &none &kp UP &none &none                                            &kp KP_EQUAL &kp KP_N7 &kp KP_N8 &kp KP_N9 &kp LOCKING_NUM &trans 
+                        &trans &kp KP_SLASH &kp LEFT &kp DOWN &kp RIGHT &kp KP_ASTERISK                  &kp KP_PLUS &kp KP_N4 &kp KP_N5 &kp KP_N6 &kp KP_MINUS &none 
+                        &trans &none &none &none &none &none                                             &kp KP_DOT &kp KP_N1 &kp KP_N2 &kp KP_N3 &none &none
+                                                                        &trans &trans  &trans     &kp ENTER  &trans &kp KP_N0
                         >;
                 };
 
                 raise_layer {
                         bindings = <
-                        &kp EXCLAMATION &kp AT &kp HASH &kp UP &kp DOLLAR &kp PERCENT &kp KP_EQUAL &none &none &kp GRAVE &none &trans 
-                        &trans &kp CARET &kp LEFT &kp DOWN &kp RIGHT &kp AMPERSAND &kp HOME &kp END &kp SEMICOLON &kp SINGLE_QUOTE &kp KP_MINUS &kp KP_SLASH 
-                        &trans &none &none &kp LEFT_BRACE &kp KP_LEFT_PARENTHESIS &kp LEFT_BRACKET &kp LEFT_GUI &kp RIGHT_ALT &kp BACKSLASH &kp PIPE &kp UNDERSCORE &trans 
-                        &trans &trans &trans &trans &trans &trans
+                        &kp EXCL &kp AT &kp HASH &kp UP &kp DOLLAR &kp PERCENT                                        &kp KP_EQUAL &none &none &kp GRAVE &none &trans 
+                        &trans &kp CARET &kp LEFT &kp DOWN &kp RIGHT &kp AMPERSAND                                    &kp HOME &kp END &kp SINGLE_QUOTE &kp SEMICOLON &kp UNDERSCORE &kp KP_SLASH 
+                        &trans &none &none &kp &macro_braces &kp &macro_parentheses &kp &macro_brackets              &kp LEFT_GUI &kp RIGHT_ALT &none &kp PIPE &kp BACKSLASH &trans 
+                                                                                       &trans &trans  &trans     &trans  &trans &trans
                         >;
                 };
                 
                 config_layer {
                         bindings = <
-                        &kp C_RESET &none &none &none &none &kp C_AL_MY_COMPUTER &none &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_DEC &none &none &none 
-                        &none &none &none &none &none &none &kp C_MUTE &kp C_VOLUME_UP &kp C_VOLUME_DOWN &none &none &none 
-                        &none &none &none &none &none &none &none &none &none &none &none &none 
-                        &trans &trans &trans &trans &trans &trans 
+                        &kp C_RESET &none &none &none &none &kp C_AL_MY_COMPUTER                    &none &kp C_BRIGHTNESS_INC &kp C_BRIGHTNESS_DEC &none &none &none 
+                        &none &none &none &none &none &none                                         &kp C_MUTE &kp C_VOLUME_UP &kp C_VOLUME_DOWN &none &none &none 
+                        &none &none &none &none &none &none                                         &none &none &none &none &none &none 
+                                                                    &trans &trans  &trans    &trans  &trans &trans 
                         >;
                 };
         };
