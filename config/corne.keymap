@@ -14,30 +14,32 @@
 
 
 
-/ macros {
-    macro_parentheses: macro_parentheses {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <0>;
-        bindings
-            = <&macro_press &kp LEFT_PARENTHESIS>
-            , <&macro_release &kp RIGHT_PARENTHESIS>
-            ;
-    };
-    macro_braces: macro_braces {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <1>;
-        bindings
-            = <&macro_press &kp LEFT_BRACE>
-            , <&macro_release &kp RIGHT_BRACE>
-            ;
-    };
-    macro_brackets: macro_brackets {
-        compatible = "zmk,behavior-macro";
-        #binding-cells = <2>;
-        bindings
-            = <&macro_press &kp LEFT_BRACKET>
-            , <&macro_release &kp RIGHT_BRACKET>
-            ;
+/ {
+    macros {
+        macro_parentheses: macro_parentheses {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LEFT_PARENTHESIS>
+                , <&macro_release &kp RIGHT_PARENTHESIS>
+                ;
+        };
+        macro_braces: macro_braces {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <1>;
+            bindings
+                = <&macro_press &kp LEFT_BRACE>
+                , <&macro_release &kp RIGHT_BRACE>
+                ;
+        };
+        macro_brackets: macro_brackets {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <2>;
+            bindings
+                = <&macro_press &kp LEFT_BRACKET>
+                , <&macro_release &kp RIGHT_BRACKET>
+                ;
+        };
     };
 };
 
