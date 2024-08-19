@@ -1,5 +1,8 @@
-# Corne keyboard configuration
-Hi there! This is the keyboard configuration that I'm currently using on my Corne LP Wireless as software dev.
+# Corne keyboard keymap configuration
+Hi there! This is the keyboard keymap that I'm currently using on my Corne LP Wireless as software dev.
+
+![keyboard](https://github.com/user-attachments/assets/45a2dca6-b565-4b1d-b4ec-53dd8c75c222)
+
 There's 4 layers:
 - Default
 - Numpad (lower)
@@ -40,7 +43,7 @@ At the bottom of the left side, macro keys that open and close these symbols: {}
 
 ### Config (both)
 
-This layer is mainly to support the Numpad layer, like, when you ar writting a math and need arithmetic symbols, you just switch to this layer and have these symbols on the top of the right side.
+This layer mainly is to support the Numpad layer, like, when you are writting a math and need arithmetic symbols, you just switch to this layer and have these symbols on the top of the right side.
 Also you have, on the left side, the same macro keys to open and close {}, (), [], up and down volume and brightness increase and decrease
 
 ![config](https://github.com/user-attachments/assets/0a050004-4674-418b-8c7c-39ae08a8e34a)
