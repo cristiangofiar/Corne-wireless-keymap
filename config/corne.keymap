@@ -8,32 +8,29 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_tap>,
-                <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS>;
+                <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
         };
 
         macro_braces: macro_braces {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_BRACE &kp RIGHT_BRACE>;
+            bindings =
+                <&macro_tap>,
+                <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT_ARROW>;
         };
 
         macro_brackets: macro_brackets {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_tap>, <&kp LEFT_BRACKET &kp RIGHT_BRACKET>;
+            bindings =
+                <&macro_tap>,
+                <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
         };
     };
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        config_layer {
-            bindings = <&mo 3>;
-            key-positions = <37 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -49,29 +46,38 @@
 
         Numpad {
             bindings = <
-&kp LC(LS(TAB))  &none  &none     &kp UP    &kp F5     &none       &kp KP_EQUAL  &kp KP_N7  &kp KP_N8  &kp KP_N9  &none  &trans
-&kp LC(TAB)      &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none       &kp COMMA     &kp KP_N4  &kp KP_N5  &kp KP_N6  &none  &none
-&trans           &none  &none     &none     &kp LCTRL  &kp RALT    &kp KP_DOT    &kp KP_N1  &kp KP_N2  &kp KP_N3  &none  &none
-                                  &trans    &trans     &trans      &kp ENTER     &trans     &kp KP_N0
+&kp LG(LEFT_BRACKET)  &none  &none     &kp UP    &none      &none       &kp KP_EQUAL  &kp KP_N7  &kp KP_N8  &kp KP_N9  &none  &trans
+&kp LC(TAB)           &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none       &kp COMMA     &kp KP_N4  &kp KP_N5  &kp KP_N6  &none  &none
+&trans                &none  &none     &none     &kp LCTRL  &kp RALT    &kp KP_DOT    &kp KP_N1  &kp KP_N2  &kp KP_N3  &none  &none
+                                       &trans    &trans     &trans      &kp ENTER     &trans     &kp KP_N0
             >;
         };
 
         Symbols {
             bindings = <
-&kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR       &kp PERCENT           &kp KP_EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
-&trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT        &kp AMPERSAND         &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp BACKSLASH
-&trans           &none      &none     &macro_braces  &macro_brackets  &macro_parentheses    &kp LEFT_GUI  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp PIPE
-                                      &trans         &trans           &trans                &trans        &trans         &trans
+&kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR          &kp PERCENT        &kp KP_EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
+&trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT           &kp AMPERSAND      &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp LG(SLASH)
+&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_GUI  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp BACKSLASH
+                                      &trans         &trans              &trans             &trans        &trans         &trans
             >;
         };
 
         Config {
             bindings = <
-&none  &none  &none                 &kp C_VOLUME_UP    &none                 &none                 &kp KP_EQUAL  &kp PLUS  &kp MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &kp CARET
-&none  &none  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_INC  &none                 &none         &none     &none      &none            &none         &none
-&none  &none  &none                 &macro_braces      &macro_brackets       &macro_parentheses    &none         &none     &none      &none            &none         &none
-                                    &trans             &trans                &trans                &trans        &trans    &trans
+&none  &none  &none                 &kp C_VOLUME_UP    &none                 &none              &kp KP_EQUAL  &kp PLUS  &kp MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &kp CARET
+&none  &none  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_INC  &none              &none         &none     &none      &none            &none         &none
+&none  &none  &none                 &macro_braces      &macro_parentheses    &macro_brackets    &none         &none     &none      &none            &none         &none
+                                    &trans             &trans                &trans             &trans        &trans    &trans
             >;
+        };
+    };
+
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        both {
+            if-layers = <1 2>;
+            then-layer = <3>;
         };
     };
 };
