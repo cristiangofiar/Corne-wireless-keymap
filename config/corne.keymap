@@ -46,10 +46,10 @@
 
         Dvorak {
             bindings = <
-&kp ESCAPE    &kp QUOTE  &kp COMMA  &kp PERIOD      &kp P  &kp Y         &kp F  &kp G   &kp C  &kp H  &kp L  &kp DELETE
-&kp TAB       &kp A      &kp O      &kp E           &kp U  &kp I         &kp D  &kp R   &kp T  &kp N  &kp S  &kp QUESTION
-&kp LEFT_GUI  &kp COLON  &kp Q      &kp J           &kp K  &kp X         &kp B  &kp M   &kp W  &kp V  &kp Z  &mt LEFT_CONTROL ENTER
-                                    &kp LEFT_SHIFT  &mo 2  &kp SPACE     &kp BACKSPACE  &mo 3  &kp RALT
+&kp ESCAPE    &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD      &kp P  &kp Y         &kp F  &kp G   &kp C  &kp H  &kp L  &kp DELETE
+&kp TAB       &kp A             &kp O      &kp E           &kp U  &kp I         &kp D  &kp R   &kp T  &kp N  &kp S  &kp QUESTION
+&kp LEFT_GUI  &kp COLON         &kp Q      &kp J           &kp K  &kp X         &kp B  &kp M   &kp W  &kp V  &kp Z  &mt LEFT_CONTROL ENTER
+                                           &kp LEFT_SHIFT  &mo 2  &kp SPACE     &kp BACKSPACE  &mo 3  &kp RALT
             >;
         };
 
