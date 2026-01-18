@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
 
 / {
     macros {
@@ -82,9 +83,9 @@
 
         Config {
             bindings = <
-&to 0  &to 1  &to 2                 &kp C_VOLUME_UP    &none                 &none              &kp KP_EQUAL  &kp PLUS  &kp MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &kp CARET
-&none  &none  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_INC  &none              &none         &none     &none      &none            &none         &none
-&none  &none  &none                 &macro_braces      &macro_parentheses    &macro_brackets    &none         &none     &none      &none            &none         &none
+&to 0  &to 1  &to 2                 &kp C_VOLUME_UP    &bt BT_NXT            &bt BT_PRV     &kp KP_EQUAL  &kp PLUS  &kp MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &kp CARET
+&none  &none  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_INC  &none              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &none
+&none  &none  &none                 &macro_braces      &macro_parentheses    &macro_brackets    &none         &none         &none         &none         &bt BT_CLR     &bt BT_CLR_ALL
                                     &trans             &trans                &trans             &trans        &trans    &trans
             >;
         };
