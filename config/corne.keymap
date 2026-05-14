@@ -45,6 +45,7 @@
             >;
         };
 
+
         DvorakES {
             bindings = <
 &kp ESCAPE    &kp SINGLE_QUOTE  &kp COMMA  &kp PERIOD      &kp P  &kp Y         &kp F  &kp G   &kp C  &kp H  &kp L  &kp DELETE
@@ -65,7 +66,7 @@
 
         Numpad {
             bindings = <
-&kp LG(LEFT_BRACKET)  &none  &none     &kp UP    &none      &none       &kp KP_EQUAL  &kp KP_N7  &kp KP_N8  &kp KP_N9  &none  &trans
+&kp LG(LEFT_BRACKET)  &none  &none     &kp UP    &none      &none       &kp EQUAL  &kp KP_N7  &kp KP_N8  &kp KP_N9  &none  &trans
 &kp LC(TAB)           &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none       &kp COMMA     &kp KP_N4  &kp KP_N5  &kp KP_N6  &none  &none
 &trans                &none  &none     &none     &kp LCTRL  &kp RALT    &kp KP_DOT    &kp KP_N1  &kp KP_N2  &kp KP_N3  &none  &none
                                        &trans    &trans     &trans      &kp ENTER     &trans     &kp KP_N0
@@ -74,21 +75,52 @@
 
         Symbols {
             bindings = <
-&kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR          &kp PERCENT        &kp KP_EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
+&kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR          &kp PERCENT        &kp EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
 &trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT           &kp AMPERSAND      &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp LG(SLASH)
-&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_GUI  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp BACKSLASH
+&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_CONTROL  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp BACKSLASH
                                       &trans         &trans              &trans             &trans        &trans         &trans
             >;
         };
 
         Config {
             bindings = <
-&to 0  &to 1  &to 2                 &kp C_VOLUME_UP    &bt BT_NXT            &bt BT_PRV     &kp KP_EQUAL  &kp PLUS  &kp MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &kp CARET
-&none  &none  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_INC  &none              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &none
+&to 0  &to 6  &none                 &kp C_VOLUME_UP    &bt BT_NXT            &bt BT_PRV     &kp EQUAL  &kp PLUS  &kp MINUS  &kp KP_ASTERISK  &kp KP_SLASH  &kp CARET
+&to 1  &to 2  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_BRIGHTNESS_INC  &none              &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &none
 &none  &none  &none                 &macro_braces      &macro_parentheses    &macro_brackets    &none         &none         &none         &none         &bt BT_CLR     &bt BT_CLR_ALL
                                     &trans             &trans                &trans             &trans        &trans    &trans
             >;
         };
+
+
+
+        QwertyWin {
+            bindings = <
+&kp ESCAPE    &kp Q  &kp W  &kp E           &kp R  &kp T      &kp Y          &kp U  &kp I      &kp O    &kp P             &kp DELETE
+&kp TAB       &kp A  &kp S  &kp D           &kp F  &kp G      &kp H          &kp J  &kp K      &kp L    &kp COLON         &kp QUESTION
+&kp LEFT_CONTROL  &kp Z  &kp X  &kp C           &kp V  &kp B      &kp N          &kp M  &kp COMMA  &kp DOT  &kp LEFT_GUI  &kp ENTER
+                            &kp LEFT_SHIFT  &mo 7  &kp SPACE  &kp BACKSPACE  &mo 8  &kp RALT
+            >;
+        };
+
+        NumpadWin {
+            bindings = <
+&kp LC(LEFT_BRACKET)  &none  &none     &kp UP    &none      &none       &kp EQUAL  &kp KP_N7  &kp KP_N8  &kp KP_N9  &none  &trans
+&kp LC(TAB)           &none  &kp LEFT  &kp DOWN  &kp RIGHT  &none       &kp COMMA     &kp KP_N4  &kp KP_N5  &kp KP_N6  &none  &none
+&trans                &none  &none     &none     &kp LCTRL  &kp RALT    &kp KP_DOT    &kp KP_N1  &kp KP_N2  &kp KP_N3  &none  &none
+                                       &trans    &trans     &trans      &kp ENTER     &trans     &kp KP_N0
+            >;
+        };
+
+        SymbolsWin {
+            bindings = <
+&kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR          &kp PERCENT        &kp EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
+&trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT           &kp AMPERSAND      &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp LC(SLASH)
+&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_CONTROL  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp BACKSLASH
+                                      &trans         &trans              &trans             &trans        &trans         &trans
+            >;
+        };
+
+
     };
 
     conditional_layers {
@@ -96,6 +128,10 @@
 
         both {
             if-layers = <3 4>;
+            then-layer = <5>;
+        };
+        both_8_9 {
+            if-layers = <7 8>;
             then-layer = <5>;
         };
     };
