@@ -76,7 +76,7 @@
             bindings = <
 &kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR          &kp PERCENT        &kp EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
 &trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT           &kp AMPERSAND      &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp LG(SLASH)
-&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_CONTROL  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp BACKSLASH
+&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_GUI  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp BACKSLASH
                                       &trans         &trans              &trans             &trans        &trans         &trans
             >;
         };
