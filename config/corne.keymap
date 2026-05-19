@@ -75,13 +75,8 @@
         Symbols_Mac {
             bindings = <
 &kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR          &kp PERCENT        &kp EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
-<<<<<<< HEAD
-&trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT           &kp AMPERSAND      &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp LC(SLASH)
-&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LESS_THAN     &kp GREATER_THAN  &kp trans     &kp BACKSLASH
-=======
 &trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT           &kp AMPERSAND      &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp LG(SLASH)
 &trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_GUI  &kp RIGHT_ALT  &kp LESS_THAN     &kp GREATER_THAN  &kp TILDE     &kp BACKSLASH
->>>>>>> 5f481b3b73161c6d7a94db9595d0d2035cb161bf
                                       &trans         &trans              &trans             &trans        &trans         &trans
             >;
         };
@@ -90,7 +85,7 @@
             bindings = <
 &kp EXCLAMATION  &kp AT     &kp HASH  &kp UP         &kp DOLLAR          &kp PERCENT        &kp EQUAL  &kp PLUS       &kp MINUS         &kp KP_ASTERISK   &kp KP_SLASH  &kp CAPSLOCK
 &trans           &kp CARET  &kp LEFT  &kp DOWN       &kp RIGHT           &kp AMPERSAND      &kp HOME      &kp END        &kp SINGLE_QUOTE  &kp GRAVE         &kp SEMI      &kp LC(SLASH)
-&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp RIGHT_ALT  &kp LEFT_CONTROL  &kp LESS_THAN     &kp GREATER_THAN  &trans        &kp BACKSLASH
+&trans           &none      &none     &macro_braces  &macro_parentheses  &macro_brackets    &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LESS_THAN     &kp GREATER_THAN  &trans        &kp BACKSLASH
                                       &trans         &trans              &trans             &trans        &trans         &trans
             >;
         };
